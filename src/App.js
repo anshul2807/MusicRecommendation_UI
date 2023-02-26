@@ -1,25 +1,35 @@
-import {useState} from 'react';
 import './App.css';
 import Login from './components/Login/Login';
 import Body from './components/Body/Body';
 import Player from './components/Player/Player';
+import {  useState } from 'react';
+
+
+const code = new URLSearchParams(window.location.search).get("code")
+
+
 
 function App() {
-  const [user] = useState({
-    islogin : true,
-    user : {
-      name : "Anshul singh"
-    }
-  }); // temp state 
+  const [accessToken,setAccessToken]=useState(null);
+  const [playingTrack, setPlayingTrack] = useState(null)
+  const [user,setUser] = useState({
+    isLogin : false,
+  });
+
+
   return (
     <div className="app">
-      {!user.islogin ? 
-        <Login />
-      :
+      {code ? 
         <>
-          <Body />
-          <Player />
-        </>
+        <Body user={user} setUser={setUser} accessToken={accessToken} setAccessToken={setAccessToken} code={code} playingTrack={playingTrack} setPlayingTrack={setPlayingTrack}/>
+        {playingTrack==null?null:
+        <Player 
+          accessToken={accessToken} 
+          trackUri={playingTrack?.uri} 
+        />}
+      </>
+      :
+        <Login />
       }
     </div>
   );

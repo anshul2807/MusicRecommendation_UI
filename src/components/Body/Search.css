@@ -1,0 +1,89 @@
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 99;
+}
+.search .section1{
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+.search .section1 input{
+    width: 500px;
+    height: 60px;
+    border: 1px solid black;
+    outline: none;
+    padding: 5px;
+    font-size: 1.4rem;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.search .section1 img{
+    cursor: pointer;
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 0px 20px 20px 0px;
+}
+.search .section2{
+    width: 90%;
+    height: 300px;
+    /* border: 1px solid green; */
+    background-color: #fff;
+    overflow-y: auto;
+    position: absolute;
+    top:100px;
+
+    z-index:13 ;
+}
+.search .section2 .search_songs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    height: 80px;
+}
+.search .section2 .search_songs_1{
+    
+    width: 25%;
+    height: 100%;
+
+
+}
+.search .section2 .search_songs_1 img{
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+}
+
+.search .section2 .search_songs_2{
+
+    width: 25%;
+    height: 100%;
+    
+}
+.search .section2 .search_songs_2 .search-songs-songName{
+
+
+}
+.search .section2 .search_songs_2 .search-songs-artistName{
+
+    opacity: 0.5;    
+}
+
+.search .section2 .search_songs_3{
+
+    width: 25%;
+    height: 100%;
+    
+}
