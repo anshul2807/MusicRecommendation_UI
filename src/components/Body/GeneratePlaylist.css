@@ -1,31 +1,39 @@
 .generatePlaylist{
     width: 700px;
-    height: 300px;
-    border: 1px solid black;
+    height: 450px;
+    border: 1px solid #fff;
 }
 .generatePlaylist .section1{
     width: 100%;
-    height: 250px;
+    height: 350px;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    
 }
 .generatePlaylist .section1 .section1__song{
     display: flex;
-    border: 1px solid black;
+    flex-direction: row;
+    /* border: 1px solid black; */
     align-items: center;
-    width: 97%;
-    height: 50px;
+    width: 95%;
+    height: 70px;
     justify-content: space-between;
     padding: 10px;
-    margin: 5px 0px;
+    margin: 5px 10px;
 }
 .generatePlaylist .section1 .section1__song img{
     cursor: pointer;
     width: 50px;
     height: 50px;
 }
+.playlists .section1 .section1__song .section1__title{
+    color: #fff;
+    font-weight:  500;
+}
 .generatePlaylist .section2{
     width: 100%;
-    height: 50px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;

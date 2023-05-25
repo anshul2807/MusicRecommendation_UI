@@ -52,7 +52,7 @@ function Playlists({ accessToken, user,setPlayingTrack }) {
                     return (
                         <div key={ind} className="section1__song">
                             <img onClick={()=>chooseTrack(list.uri)} src={list.playlistImage} alt="" />
-                            <p>{list.name}</p>
+                            <p className='section1__title'>{list.name}</p>
                             <p>{list.userName}</p>
                         </div>
                     );
@@ -60,7 +60,7 @@ function Playlists({ accessToken, user,setPlayingTrack }) {
                 }
             </div>
             <h1>Generate Custom a Playlists</h1>
-            <GeneratePlaylist setPlayingTrack={setPlayingTrack}/>
+            <GeneratePlaylist accessToken={accessToken} setPlayingTrack={setPlayingTrack}/>
         </div>
     )
 }

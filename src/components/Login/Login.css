@@ -1,9 +1,12 @@
 .login{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* border: 1px solid black; */
     width: 100%;
-    height: 600px;
-    background-color: inherit;
+    height: 100%;
+    background-color: #000000;
 }
 .login .section1{
     /* border: 1px solid red; */
@@ -12,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 
 }
 .login .section1 img{
@@ -26,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 .btn{
     width: 300px;
